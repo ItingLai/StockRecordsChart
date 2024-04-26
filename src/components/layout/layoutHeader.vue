@@ -1,6 +1,6 @@
 <script setup lang="ts"></script>
 <template>
-  <el-menu class="el-menu" mode="horizontal" :ellipsis="false" router defaultActive="/">
+  <el-menu class="el-menu" mode="horizontal" :ellipsis="false" router>
     <div class="site-name">
       <el-icon :size="50">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
@@ -10,11 +10,11 @@
           ></path>
         </svg>
       </el-icon>
-      <span class="name">強化學習交易結果</span>
+      <span class="name">強化學習結合深度學習之交易結果</span>
     </div>
     <div class="flex-grow" />
-    <el-menu-item index="/">首頁</el-menu-item>
-    <el-menu-item index="author">作者介紹</el-menu-item>
+    <el-menu-item index="/" v-if="$route.path != '/'">交易結果</el-menu-item>
+    <el-menu-item index="author" v-if="$route.path == '/'">作者介紹</el-menu-item>
   </el-menu>
 </template>
 <style scoped lang="scss">

@@ -61,7 +61,7 @@ onMounted(() => {
           </el-card>
         </el-col>
       </el-row>
-      <el-link href="https://github.com/ItingLai/StockRecordsChart" target="_blank">
+      <el-link href="https://github.com/ZerolBozi/price_prediction" target="_blank">
         <el-icon size="30">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
             <path

@@ -65,7 +65,7 @@ const InitChart = (): void => {
       horzAlign: 'center',
       vertAlign: 'center',
       color: 'rgba(150, 150, 150, 0.5)',
-      text: '交易圖表'
+      text: '交易結果'
     }
   })
   Chart.timeScale().fitContent()
@@ -316,6 +316,16 @@ watch(PriceLine, () => {
       from: new Date(PriceLine.value[PriceLine.value.length - 50].datetime).getTime() / 1000,
       to: new Date(PriceLine.value[PriceLine.value.length - 1].datetime).getTime() / 1000
     })
+    Chart.applyOptions({
+      watermark: {
+        visible: true,
+        fontSize: 24,
+        horzAlign: 'center',
+        vertAlign: 'center',
+        color: 'rgba(150, 150, 150, 0.5)',
+        text: CurrentStock.value
+      }
+    })
     appendChartText()
   }
 })
@@ -329,6 +339,16 @@ watch(CurrentStock, () => {
   volumeSeries.setData([]) //remove Volume
   document.getElementById('symbolName')?.remove() //remove symbolName
   if (CurrentStock.value === null) {
+    Chart.applyOptions({
+      watermark: {
+        visible: true,
+        fontSize: 24,
+        horzAlign: 'center',
+        vertAlign: 'center',
+        color: 'rgba(150, 150, 150, 0.5)',
+        text: '自訂檔案交易結果'
+      }
+    })
     return
   }
 })
