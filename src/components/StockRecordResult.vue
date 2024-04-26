@@ -95,7 +95,7 @@ const FormatPicList = computed(() => {
     </el-col>
     <el-col :span="12" class="result-col">
       <p>勝率</p>
-      <span>{{ FilterStockResult.win_rate }}%</span>
+      <span>{{ FilterStockResult.win_rate * 100 }}%</span>
     </el-col>
     <el-col :span="12" class="result-col">
       <p>平均正收益</p>
