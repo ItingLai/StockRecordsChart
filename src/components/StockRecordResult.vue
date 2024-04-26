@@ -52,7 +52,7 @@ const FilterStockResult = computed(() => {
     ticker: StockResult.value.ticker,
     initial_balance: StockResult.value.initial_balance,
     total_profits: numberFormat(StockResult.value.total_profits),
-    win_rate: numberFormat(StockResult.value.win_rate),
+    win_rate: numberFormat(StockResult.value.win_rate) * 100,
     avg_positive: numberFormat(StockResult.value.avg_positive),
     avg_negative: numberFormat(StockResult.value.avg_negative),
     odds: numberFormat(StockResult.value.odds),
@@ -95,7 +95,7 @@ const FormatPicList = computed(() => {
     </el-col>
     <el-col :span="12" class="result-col">
       <p>勝率</p>
-      <span>{{ FilterStockResult.win_rate * 100 }}%</span>
+      <span>{{ FilterStockResult.win_rate }}%</span>
     </el-col>
     <el-col :span="12" class="result-col">
       <p>平均正收益</p>
