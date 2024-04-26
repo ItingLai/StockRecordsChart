@@ -72,6 +72,9 @@ var F1=(t,e)=>()=>(e||t((e={exports:{}}).exports,e),e.exports);var H5=F1((un,cn)
         <div style="font-size: 15px;color: black">
           股數:${k.size}
         </div>
+        <div style="font-size: 15px;color: black">
+          成本:${(Math.round(k.cost*100)/100).toLocaleString()}
+        </div>
       `):(x.style.height="160px",x.innerHTML=`
         <div style="color: black">
           日期:${k.datetime}
