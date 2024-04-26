@@ -14,7 +14,7 @@ const routes = [
 ]
 
 export const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHashHistory(process.env.NODE_ENV == 'development' ? "/" : "/StockRecordsChart"),
   routes,
 })
 
