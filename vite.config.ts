@@ -27,13 +27,4 @@ export default defineConfig({
     }
   },
   base: process.env.NODE_ENV == 'development' ? "/" : "/StockRecordsChart",
-  server: {
-    proxy: {
-      '/api': {
-        target: 'https://flying-saved-alpaca.ngrok-free.app/api/v1',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, '')
-      }
-    }
-  }
 })

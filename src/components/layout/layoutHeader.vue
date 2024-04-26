@@ -1,6 +1,6 @@
 <script setup lang="ts"></script>
 <template>
-  <el-menu class="el-menu" mode="horizontal" :ellipsis="false">
+  <el-menu class="el-menu" mode="horizontal" :ellipsis="false" router defaultActive="/">
     <div class="site-name">
       <el-icon :size="50">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
@@ -13,6 +13,8 @@
       <span class="name">強化學習交易結果</span>
     </div>
     <div class="flex-grow" />
+    <el-menu-item index="/">首頁</el-menu-item>
+    <el-menu-item index="author">作者介紹</el-menu-item>
   </el-menu>
 </template>
 <style scoped lang="scss">
@@ -28,9 +30,16 @@
 }
 .el-menu {
   background-color: transparent;
+  & .el-menu-item {
+    color: #333;
+    font-weight: 700;
+  }
 }
 .el-icon {
   margin: 0 10px;
   color: #686868;
+}
+.flex-grow {
+  flex: 1;
 }
 </style>

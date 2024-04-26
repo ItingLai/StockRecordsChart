@@ -87,11 +87,11 @@ const FormatPicList = computed(() => {
     </el-col>
     <el-col :span="12" class="result-col">
       <p>初始資金</p>
-      <span>{{ FilterStockResult.initial_balance }}</span>
+      <span>{{ FilterStockResult.initial_balance.toLocaleString() }}</span>
     </el-col>
     <el-col :span="12" class="result-col">
       <p>總收益</p>
-      <span>{{ FilterStockResult.total_profits }}</span>
+      <span>{{ FilterStockResult.total_profits.toLocaleString() }}</span>
     </el-col>
     <el-col :span="12" class="result-col">
       <p>勝率</p>
@@ -99,11 +99,11 @@ const FormatPicList = computed(() => {
     </el-col>
     <el-col :span="12" class="result-col">
       <p>平均正收益</p>
-      <span>{{ FilterStockResult.avg_positive }}</span>
+      <span>{{ FilterStockResult.avg_positive.toLocaleString() }}</span>
     </el-col>
     <el-col :span="12" class="result-col">
       <p>平均負收益</p>
-      <span>{{ FilterStockResult.avg_negative }}</span>
+      <span>{{ FilterStockResult.avg_negative.toLocaleString() }}</span>
     </el-col>
     <el-col :span="12" class="result-col">
       <p>賠率</p>
@@ -115,18 +115,18 @@ const FormatPicList = computed(() => {
     </el-col>
     <el-col :span="12" class="result-col">
       <p>最大損失</p>
-      <span>{{ FilterStockResult.max_loss }}</span>
+      <span>{{ FilterStockResult.max_loss.toLocaleString() }}</span>
     </el-col>
     <el-col :span="12" class="result-col">
       <p>最大回撤</p>
-      <span>{{ FilterStockResult.mdd }}</span>
+      <span>{{ FilterStockResult.mdd.toLocaleString() }}</span>
     </el-col>
     <el-col :span="12" class="result-col">
       <p>最大回撤比率</p>
       <span>{{ FilterStockResult.mdd_percentage }}</span>
     </el-col>
     <el-col :span="12" class="result-col">
-      <p>管理資金回報率</p>
+      <p>管理資金比率</p>
       <span>{{ FilterStockResult.mar }}</span>
     </el-col>
     <el-col :span="12" class="result-col">
