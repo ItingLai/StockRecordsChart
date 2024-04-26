@@ -67,7 +67,7 @@ var dy=(t,e)=>()=>(e||t((e={exports:{}}).exports,e),e.exports);var i8=dy((nn,sn)
           股數:${k.size}
         </div>
         <div style="font-size: 15px;color: black">
-          成本:${Math.round(k.cost*100)/100}
+          成本:${(Math.round(k.cost*100)/100).toLocaleString()}
         </div>
         <div style="font-size: 15px;color: black">
           收益:${Math.round(k.profit*100)/100}
