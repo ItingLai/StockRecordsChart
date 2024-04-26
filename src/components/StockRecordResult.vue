@@ -134,7 +134,9 @@ const FormatPicList = computed(() => {
       <span>{{ FilterStockResult.sqn }}</span>
     </el-col>
     <el-col :span="12" class="result-col">
-      <el-button type="primary" @click="ImagePreview" style="margin: 5px 0"> 查看圖片 </el-button>
+      <el-button type="primary" @click="ImagePreview" style="margin: 5px 0">
+        模型結果圖片
+      </el-button>
     </el-col>
     <el-image-viewer @close="ImagePreview" :url-list="FormatPicList" v-if="isImagePreview" />
   </el-row>
