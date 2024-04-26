@@ -1,4 +1,5 @@
 import appHome from "@/views/appHome.vue"
+import appAuthor from "@/views/appAuthor.vue"
 import { createRouter, createWebHashHistory } from "vue-router"
 const routes = [
   { 
@@ -8,7 +9,7 @@ const routes = [
   },
   { 
     path: '/author', 
-    component: import('@/views/appAuthor.vue'),
+    component: appAuthor,
     meta:{keepAlive:false}
    },
 ]
