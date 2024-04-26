@@ -246,6 +246,9 @@ const appendTooltip = (param) => {
         <div style="font-size: 15px;color: black">
           股數:${item.size}
         </div>
+        <div style="font-size: 15px;color: black">
+          成本:${(Math.round(item.cost * 100) / 100).toLocaleString()}
+        </div>
       `
     } else {
       toolTip.style.height = '160px'
