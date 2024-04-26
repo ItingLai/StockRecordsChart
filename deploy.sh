@@ -9,9 +9,8 @@ set -e
 # 部署到自定義網域
 # echo 'www.example.com' > CNAME
 
-git init # 初始化
 #git checkout -b main # 建立並切換到分支
-git add -A # 提交全部變更
+git add . # 提交全部變更
 git commit -m 'deploy' # commit 訊息
 
 
@@ -20,8 +19,8 @@ git commit -m 'deploy' # commit 訊息
 # 部署到 https://<USERNAME>.github.io
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 # 部署到 https://<USERNAME>.github.io/<REPO>
- git push -f -u git@github.com:laiiting/StockEchart.git master
-# 除此之外，也可以改走 HTTPS 模式
+ git push -f -u git@github.com:laiiting/StockRecordsChart.git 
+# 除此之外，也可以改走 HTTPS 模式main
 # git push -f https://github.com/hsiangfeng/example-vite-react master:gh-pages
 
 cd -
