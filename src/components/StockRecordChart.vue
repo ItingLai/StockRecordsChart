@@ -117,8 +117,8 @@ const FilterMarkers = computed(() => {
           position: 'aboveBar',
           color: '#ef5350',
           shape: 'arrowUp',
-          text: `buy @ ${item.price} @ ${item.order_type}${
-            item.order_type === 'close' ? ' @ ' + item.profit : ''
+          text: `buy @ ${FormatNumber(item.price)} @ ${item.order_type}${
+            item.order_type === 'close' ? ' @ ' + FormatNumber(item.profit) : ''
           }`
         })
       } else if (item.side === 'short') {
@@ -127,8 +127,8 @@ const FilterMarkers = computed(() => {
           position: 'belowBar',
           color: '#26a69a',
           shape: 'arrowDown',
-          text: `sell @ ${item.price} @ ${item.order_type}${
-            item.order_type === 'close' ? ' @ ' + item.profit : ''
+          text: `sell @ ${FormatNumber(item.price)} @ ${item.order_type}${
+            item.order_type === 'close' ? ' @ ' + FormatNumber(item.profit) : ''
           }`
         })
       }
@@ -138,7 +138,9 @@ const FilterMarkers = computed(() => {
     return []
   }
 })
-
+const FormatNumber = (value: number): number => {
+  return Math.round(value * 100) / 100
+}
 const appendChartText = (param = null): void => {
   let container = document.getElementById('Chart')
   document.getElementById('symbolName')?.remove()
