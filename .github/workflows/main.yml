@@ -20,6 +20,8 @@ jobs:
         with:
           node-version: 20
 
+      - name: npm install
+        run: npm i
       # Runs a single command using the runners shell
       - name: try to build the project
         run: npm run build
