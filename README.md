@@ -4,7 +4,7 @@ My school graduation project
 
 Predicting financial market prices using LSTM and DQN
 
-DemoPage [Demo](https://itinglai.github.io/StockRecordsChart/)
+[Page](https://itinglai.github.io/StockRecordsChart/)
 
 ## Project Setup and install modules
 
