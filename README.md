@@ -1,12 +1,14 @@
-# STOCK_RECORDS_CHART
+# Stock_Records_Chart
 
 My school graduation project
 
 Predicting financial market prices using LSTM and DQN
 
-DemoPage [Demo](https://itinglai.github.io/StockRecordsChart/)
+- View Demo [Page](https://itinglai.github.io/StockRecordsChart/)
+- View Predicting with RL [Code](https://github.com/ZerolBozi/price_prediction)
+## Project Setup
 
-## Project Setup and install modules
+### Install modules
 
 ```sh
 npm install
