@@ -44,23 +44,23 @@ const ImagePreview = () => {
   isImagePreview.value = !isImagePreview.value
 }
 const numberFormat = (value: number) => {
-  return Math.round(value * 100) / 100
+  return Number(Number(value).toFixed(2))
 }
 const FilterStockResult = computed(() => {
   if (!StockResult.value) return
   return {
     ticker: StockResult.value.ticker,
     initial_balance: numberFormat(StockResult.value.initial_balance),
-    total_profits: Math.floor(numberFormat(StockResult.value.total_profits)),
-    total_return_rate: numberFormat(StockResult.value.total_return_rate) * 100,
-    win_rate: numberFormat(StockResult.value.win_rate) * 100,
+    total_profits: Math.floor(StockResult.value.total_profits),
+    total_return_rate: numberFormat(StockResult.value.total_return_rate * 100),
+    win_rate: numberFormat(StockResult.value.win_rate * 100),
     total_trading: StockResult.value.total_trading,
-    avg_positive: Math.floor(numberFormat(StockResult.value.avg_positive)),
-    avg_negative: Math.floor(numberFormat(StockResult.value.avg_negative)),
+    avg_positive: Math.floor(StockResult.value.avg_positive),
+    avg_negative: Math.floor(StockResult.value.avg_negative),
     odds: numberFormat(StockResult.value.odds),
     expected_value: numberFormat(StockResult.value.expected_value),
-    max_loss: Math.floor(numberFormat(StockResult.value.max_loss)),
-    mdd: Math.floor(numberFormat(StockResult.value.mdd)),
+    max_loss: Math.floor(StockResult.value.max_loss),
+    mdd: Math.floor(StockResult.value.mdd),
     mdd_percentage: numberFormat(StockResult.value.mdd_percentage),
     mar: numberFormat(StockResult.value.mar),
     sqn: numberFormat(StockResult.value.sqn)
