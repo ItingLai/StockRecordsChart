@@ -52,7 +52,9 @@ const FilterStockResult = computed(() => {
     ticker: StockResult.value.ticker,
     initial_balance: StockResult.value.initial_balance,
     total_profits: numberFormat(StockResult.value.total_profits),
+    total_return_rate: numberFormat(StockResult.value.total_return_rate) * 100,
     win_rate: numberFormat(StockResult.value.win_rate) * 100,
+    total_trading: StockResult.value.total_trading,
     avg_positive: numberFormat(StockResult.value.avg_positive),
     avg_negative: numberFormat(StockResult.value.avg_negative),
     odds: numberFormat(StockResult.value.odds),
@@ -92,6 +94,14 @@ const FormatPicList = computed(() => {
     <el-col :span="12" class="result-col">
       <p>總收益</p>
       <span>{{ FilterStockResult.total_profits.toLocaleString() }}</span>
+    </el-col>
+    <el-col :span="12" class="result-col">
+      <p>總報酬率</p>
+      <span>{{ FilterStockResult.total_return_rate }}%</span>
+    </el-col>
+    <el-col :span="12" class="result-col">
+      <p>總交易次數</p>
+      <span>{{ FilterStockResult.total_trading }}</span>
     </el-col>
     <el-col :span="12" class="result-col">
       <p>勝率</p>

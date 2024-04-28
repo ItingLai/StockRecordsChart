@@ -73,6 +73,8 @@ export interface StockResultData {
     "initial_balance": number,
     "total_profits": number,
     "win_rate": number,
+    "total_return_rate": number,
+    "total_trading": number,
     "avg_positive": number,
     "avg_negative": number,
     "odds": number,
