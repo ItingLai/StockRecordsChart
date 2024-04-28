@@ -1,0 +1,2 @@
+ticker,initial_balance,total_profits,win_rate,avg_positive,avg_negative,odds,expected_value,max_loss,mdd,mdd_percentage,mar,sqn,total_trading,win_trading,total_return_rate
+2330,100000,27584.99999999996,0.76,946.78947368421,-699.4166666666679,1.3536844613619086,0.7888001906350506,-3636,-3861.0,-0.1289837642814192,7.144522144522135,3.055497411325805,50,38,0.2758499999999996
