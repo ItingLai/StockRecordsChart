@@ -165,7 +165,7 @@ const appendChartText = (param = null): void => {
     const lastIndex = series.data().length - 1
     return series.dataByIndex(lastIndex)
   }
-  const formatPrice = (price) => (Math.round(price * 100) / 100).toFixed(2)
+  const formatPrice = (price) => Number(Number(price).toFixed(2))
   const Currentprice = validCrosshairPoint
     ? param.seriesData.get(candlestickSeries)
     : getLastPrice(candlestickSeries)
@@ -180,7 +180,7 @@ const appendChartText = (param = null): void => {
   let high = Currentprice.high !== undefined ? formatPrice(Currentprice.high) : ''
   let low = Currentprice.low !== undefined ? formatPrice(Currentprice.low) : ''
   let close = Currentprice.close !== undefined ? formatPrice(Currentprice.close) : ''
-  let volume = CurrentVolume.volume !== undefined ? CurrentVolume.volume / 1000 : ''
+  let volume = CurrentVolume.volume !== undefined ? (CurrentVolume.volume / 1000).toFixed(5) : ''
   let color = Currentprice.open > Currentprice.close ? '#26a69a' : '#ef5350'
   legend.innerHTML = `<div style="font-size: 14px">${time} 開=<span style="color:${color};">${open}</span>高=<span style="color:${color};">${high}</span>低=<span style="color:${color};">${low}</span>收=<span style="color:${color};">${close}</span>成交量:<span style="color:${color};">${volume}K</span></div>`
 }
