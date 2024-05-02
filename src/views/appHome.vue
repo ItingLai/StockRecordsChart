@@ -55,7 +55,9 @@ function ChangeStockCode() {
         type: 'error'
       })
     })
-  closeFullScreen()
+    .finally(() => {
+      closeFullScreen()
+    })
 }
 const handleMarketChange = (): void => {
   CurrentStock.value.StockCode = null
