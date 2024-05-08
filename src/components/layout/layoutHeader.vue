@@ -1,4 +1,8 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const openLink = (path: string) => {
+  window.open(`${path}.pdf`, '_blank')
+}
+</script>
 <template>
   <el-menu class="el-menu" mode="horizontal" :ellipsis="false" router>
     <div class="site-name">
@@ -13,6 +17,8 @@
       <span class="name">強化學習結合深度學習之交易結果</span>
     </div>
     <div class="flex-grow" />
+    <el-menu-item @click="openLink('應用深度學習於金融市場模型_簡報')">簡報</el-menu-item>
+    <el-menu-item @click="openLink('應用深度學習於金融市場模型')">企劃書</el-menu-item>
     <el-menu-item index="/" v-if="$route.path != '/'">交易結果</el-menu-item>
     <el-menu-item index="author" v-if="$route.path == '/'">作者介紹</el-menu-item>
   </el-menu>
