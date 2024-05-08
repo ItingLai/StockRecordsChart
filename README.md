@@ -1,4 +1,4 @@
-# Stock_Records_Chart
+# Stock Records Chart
 
 My school graduation project
 
